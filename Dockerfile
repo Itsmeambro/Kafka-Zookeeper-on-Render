@@ -25,6 +25,9 @@ ENV KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092
 
 # Add a health check script for Zookeeper
 COPY check-zookeeper.sh /usr/local/bin/check-zookeeper.sh
+
+# Add a health check script for Zookeeper
+COPY check-zookeeper.sh /usr/local/bin/check-zookeeper.sh
 RUN chmod +x /usr/local/bin/check-zookeeper.sh
 
 CMD ["sh", "-c", "/usr/local/bin/check-zookeeper.sh && /etc/confluent/docker/run"]
