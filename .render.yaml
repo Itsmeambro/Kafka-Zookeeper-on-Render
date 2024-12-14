@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: kafka-zookeeper
+    env: docker
+    plan: starter
+    dockerfilePath: Dockerfile
+    port: 9092
+    healthCheckPath: /
